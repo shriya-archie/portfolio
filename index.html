@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shriya Upadhyay | Creative Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --mid-pink: #e08dad;
+            --soft-purple: #b39bc8;
+            --warm-cream: #f4ebd9;
+            --text-main: #3a3543;
+        }
+        body { font-family: 'Outfit', sans-serif; background: #faf5f8; color: var(--text-main); cursor: url('https://cur.cursors-4u.net/symbols/sym-9/sym833.cur'), auto; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .glass { background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.4); }
+        .vibrant-shadow { box-shadow: 10px 10px 0px var(--mid-pink); }
+        .gradient-text { background: linear-gradient(45deg, #e08dad, #9cbbe9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .floating { animation: float 3s ease-in-out infinite; }
+        @keyframes float { 
+            0%, 100% { transform: translateY(0); } 
+            50% { transform: translateY(-15px); } 
+        }
+        .blob { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; background: var(--soft-purple); }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed top-6 w-full z-50 px-6">
+        <div class="max-w-4xl mx-auto glass rounded-3xl px-8 py-4 flex justify-between items-center shadow-lg">
+            <span class="serif text-2xl font-bold text-[#e08dad]">s.u.</span>
+            <div class="hidden md:flex gap-8 font-semibold text-sm uppercase tracking-widest text-[#5c5566]">
+                <a href="#about" class="hover:text-[#e08dad] transition">About</a>
+                <a href="#blog" class="hover:text-[#e08dad] transition">Blog</a>
+                <a href="#contact" class="hover:text-[#e08dad] transition">Contact</a>
+            </div>
+            <div class="flex gap-4 text-[#e08dad]">
+                <i class="fab fa-instagram cursor-pointer hover:text-[#b39bc8] transition"></i>
+                <i class="fab fa-github cursor-pointer hover:text-[#b39bc8] transition"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
+        <div class="absolute top-20 left-10 w-32 h-32 blob opacity-25 floating"></div>
+        <div class="absolute bottom-20 right-10 w-48 h-48 blob opacity-15 floating" style="animation-delay: 1s; background: #9cbbe9;"></div>
+        
+        <div class="max-w-4xl text-center z-10">
+            <p class="text-[#e08dad] font-bold tracking-[0.3em] uppercase mb-4 text-sm">Welcome to my universe</p>
+            <h1 class="serif text-5xl md:text-6xl font-bold mb-8 text-[#3a3543]">Hi, I'm <span class="gradient-text">Shriya</span> ✨</h1>
+            <p class="text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-10 font-light">
+                I write about coding, machine learning, and tech.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="#blog" class="bg-[#e08dad] text-white px-10 py-4 rounded-full font-bold shadow-md hover:scale-105 transition">Read My Blog</a>
+                <a href="#contact" class="bg-white border-2 border-[#f2d1df] text-[#e08dad] px-10 py-4 rounded-full font-bold hover:bg-[#faf5f8] transition">Let's Talk</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 bg-[#f5ecf1]">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="vibrant-shadow bg-white rounded-3xl overflow-hidden aspect-square flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&q=80&w=800" alt="Creative aesthetic workspace" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div>
+                <h2 class="serif text-4xl font-bold mb-6 text-[#3a3543]">Passionate about <br>Code & Tech</h2>
+                <p class="text-slate-600 leading-relaxed mb-8">
+                    I love to think about solutions to complex problems and develop unique approaches to see the world in a better way using technology and coding.
+                </p>
+                <div class="grid grid-cols-2 gap-4 text-xs font-bold uppercase tracking-widest text-[#e08dad]">
+                    <div class="flex items-center gap-2"><i class="fas fa-heart text-[#b39bc8]"></i> Machine Learning</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-heart text-[#b39bc8]"></i> Core CS</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-heart text-[#b39bc8]"></i> Tutoring</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-heart text-[#b39bc8]"></i> App Concepts</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="py-24 bg-[#fcedf2] px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="serif text-4xl font-bold text-[#3a3543]">My Blog</h2>
+                <p class="text-slate-500 mt-2 italic">Thoughts on tech, life, and coding.</p>
+            </div>
+            
+            <div id="blog-container" class="grid md:grid-cols-3 gap-8">
+                <p class="text-center text-slate-500 col-span-3">Loading magic thoughts...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 text-center">
+        <div class="max-w-2xl mx-auto bg-[#2b2633] text-white p-16 rounded-[3rem] shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-[#e08dad]/10 rounded-full"></div>
+            <h2 class="serif text-4xl font-bold mb-6">Let's create something <br><span class="text-[#e08dad] italic">magical.</span></h2>
+            <p class="text-slate-400 mb-10">Whether you have a project idea or just want to say hi, my inbox is always open!</p>
+            <div class="flex flex-col gap-4">
+                <a href="mailto:shriya.13april@gmail.com" class="text-xl md:text-2xl font-bold hover:text-[#e08dad] transition underline decoration-1">shriya.13april@gmail.com</a>
+                <div class="flex justify-center gap-6 mt-6">
+                    <a href="#" class="w-12 h-12 border border-slate-700 rounded-full flex items-center justify-center hover:bg-[#e08dad] hover:border-[#e08dad] transition"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="w-12 h-12 border border-slate-700 rounded-full flex items-center justify-center hover:bg-[#e08dad] hover:border-[#e08dad] transition"><i class="fab fa-github"></i></a>
+                    <a href="#" class="w-12 h-12 border border-slate-700 rounded-full flex items-center justify-center hover:bg-[#e08dad] hover:border-[#e08dad] transition"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-slate-400 text-sm">
+        <p>Handcrafted with ✨ and 💖 by Shriya Upadhyay &copy; 2026</p>
+    </footer>
+
+    <script>
+        async function fetchMyBlogs() {
+            const username = 'shriya_upadhyay_1304'; 
+            const blogContainer = document.getElementById('blog-container');
+            
+            try {
+                // Fixed: endpoint now points correctly to the username variable
+                const response = await fetch(`https://dev.to/api/articles?username=${username}`);
+                const articles = await response.json();
+                
+                blogContainer.innerHTML = '';
+                
+                if (articles.length === 0) {
+                    blogContainer.innerHTML = '<p class="text-center text-slate-500 col-span-3">No posts published yet. Stay tuned!</p>';
+                    return;
+                }
+
+                articles.slice(0, 3).forEach(article => {
+                    const postDate = new Date(article.published_at).toLocaleDateString('en-US', {
+                        month: 'long',
+                        year: 'numeric'
+                    });
+
+                    // Fixed: tag_list is an array, we grab the first element if it exists
+                    const category = article.tag_list && article.tag_list.length > 0 ? article.tag_list : 'Tech';
+
+                    const articleHTML = `
+                        <div class="glass p-8 rounded-3xl flex flex-col justify-between hover:scale-[1.02] transition duration-300 shadow-sm">
+                            <div>
+                                <span class="text-[10px] font-bold text-[#e08dad] uppercase tracking-widest">${category} • ${postDate}</span>
+                                <h4 class="font-bold text-xl mt-4 mb-4 line-clamp-2 text-[#3a3543]">${article.title}</h4>
+                                <p class="text-slate-500 text-sm mb-6 line-clamp-3">${article.description}</p>
+                            </div>
+                            <a href="${article.url}" target="_blank" class="text-[#e08dad] hover:text-[#b39bc8] font-bold text-sm inline-block mt-auto transition">Read More →</a>
+                        </div>
+                    `;
+                    
+                    blogContainer.insertAdjacentHTML('beforeend', articleHTML);
+                });
+            } catch (error) {
+                console.error('Error fetching blogs:', error);
+                blogContainer.innerHTML = '<p class="text-center text-red-400 col-span-3">Oops! Couldn\'t load the diary entries right now.</p>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchMyBlogs);
+    </script>
+
+</body>
+</html>
