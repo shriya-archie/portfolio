@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Build Your First ML Project | Shriya Upadhyay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght=0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --mid-pink: #e08dad;
+            --soft-purple: #b39bc8;
+            --warm-cream: #f4ebd9;
+            --text-main: #3a3543;
+        }
+        body { 
+            font-family: 'Outfit', sans-serif; 
+            background: #faf5f8; 
+            color: var(--text-main); 
+            cursor: url('https://cur.cursors-4u.net/symbols/sym-9/sym833.cur'), auto; 
+        }
+        .serif { font-family: 'Playfair Display', serif; }
+        .glass { background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.4); }
+        .code-block { background: #2b2633; color: #f4ebd9; font-family: 'Courier New', Courier, monospace; }
+        .floating { animation: float 4s ease-in-out infinite; }
+        @keyframes float { 
+            0%, 100% { transform: translateY(0px); } 
+            50% { transform: translateY(-10px); } 
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-6 w-full z-50 px-6">
+        <div class="max-w-4xl mx-auto glass rounded-3xl px-8 py-4 flex justify-between items-center shadow-md">
+            <a href="index.html" class="serif text-2xl font-bold text-[#e08dad] hover:opacity-80 transition">s.u.</a>
+            <div class="flex gap-8 font-semibold text-sm uppercase tracking-widest text-[#5c5566]">
+                <a href="index.html#about" class="hover:text-[#e08dad] transition">About</a>
+                <a href="index.html#blog" class="text-[#e08dad] transition">Blog</a>
+                <a href="index.html#contact" class="hover:text-[#e08dad] transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24 px-6 max-w-3xl mx-auto">
+        
+        <header class="text-center mb-12">
+            <span class="text-[#e08dad] uppercase tracking-widest font-bold text-xs bg-[#fcedf2] px-4 py-1.5 rounded-full">Guide for Beginners</span>
+            <h1 class="serif text-4xl md:text-5xl font-bold text-[#3a3543] mt-6 mb-4 leading-tight">
+                How to Make Your First Machine Learning Project (As an Absolute Beginner)
+            </h1>
+            <div class="flex items-center justify-center gap-3 text-slate-500 text-sm italic">
+                <span>By Shriya Upadhyay</span>
+                <span>•</span>
+                <span>5 min read</span>
+            </div>
+        </header>
+
+        <div class="w-full bg-white rounded-3xl p-8 mb-12 border border-[#f2d1df] shadow-sm">
+            <div class="grid grid-cols-3 gap-4 relative">
+                <div class="flex flex-col items-center text-center p-4 bg-[#faf5f8] rounded-2xl border border-[#f2d1df]/60 relative z-10">
+                    <div class="w-12 h-12 rounded-full bg-[#e08dad] text-white flex items-center justify-center text-lg mb-3 shadow-sm">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Phase 01</span>
+                    <h4 class="font-bold text-sm text-[#3a3543] leading-tight">Tutorial Hell 😵‍💫</h4>
+                </div>
+
+                <div class="flex flex-col items-center text-center p-4 bg-[#faf5f8] rounded-2xl border border-[#f2d1df]/60 relative z-10">
+                    <div class="w-12 h-12 rounded-full bg-[#9cbbe9] text-white flex items-center justify-center text-lg mb-3 shadow-sm">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Phase 02</span>
+                    <h4 class="font-bold text-sm text-[#3a3543] leading-tight">Reverse Engineer 🛠️</h4>
+                </div>
+
+                <div class="flex flex-col items-center text-center p-4 bg-[#f2fcf7] rounded-2xl border border-emerald-100 relative z-10">
+                    <div class="w-12 h-12 rounded-full bg-emerald-400 text-white flex items-center justify-center text-lg mb-3 shadow-sm animation floating">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1">Success</span>
+                    <h4 class="font-bold text-sm text-emerald-800 leading-tight">First Project! ✨</h4>
+                </div>
+
+                <div class="absolute top-10 left-[15%] right-[15%] h-[2px] bg-gradient-to-r from-[#e08dad] via-[#9cbbe9] to-emerald-200 z-0 hidden sm:block"></div>
+            </div>
+        </div>
+
+        <article class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-6 text-base md:text-lg">
+            
+            <p>
+                Making your first Machine Learning project as beginner can be <strong class="text-[#3a3543]">daunting</strong>. To be honest, <strong class="text-[#3a3543]">I was daunted.</strong> There are a ton of resources online with different approaches on how to make your first project. But <strong class="text-[#e08dad] bg-[#fcedf2] px-1.5 py-0.5 rounded">youtube tutorial hell is a real thing.</strong> I kept watching tutorials after tutorials, never really finishing any video properly and getting burned out. I never really got close to making my first project or understanding why use <span class="underline decoration-[#b39bc8] decoration-2 underline-offset-4 font-semibold text-[#3a3543]">decision trees</span> instead of <span class="underline decoration-[#b39bc8] decoration-2 underline-offset-4 font-semibold text-[#3a3543]">logistic regression</span>.
+            </p>
+
+            <p>
+                In this write up I am going to <strong class="text-[#e08dad]">dismistify machine learning</strong> for you, make the process a little easier.
+            </p>
+
+            <p>
+                If you don't agree with my approach that is totally fine. I think there are a lot of ways to do the same things. People learn, absorb and understand information using different methods and approaches. Some learn better from youtube tutorials, other from bootcamps, documentation or if you are anything like me, <strong class="text-[#3a3543] border-b-2 border-[#warm-cream]">you learn by doing.</strong>
+            </p>
+
+            <p>
+                If you chose to go by this method, you will <strong class="text-[#e08dad]">build an aptitude for machine learning</strong> by doing everything on your own.
+            </p>
+
+            <div class="bg-[#f4ebd9]/40 border border-[#warm-cream] rounded-2xl p-4 text-sm mb-6 text-[#5c5566]">
+                <strong>Note -</strong> This write up will help beginners to make their first machine learning project. The only <span class="underline decoration-[#e08dad] decoration-2 underline-offset-2 font-medium">prerequisite</span> that I ask of you is a basic knowledge of coding and python.
+            </div>
+
+            <hr class="border-[#f2d1df] my-10" />
+
+            <h2 class="serif text-2xl md:text-3xl font-bold text-[#3a3543] mt-8">ChatGPT</h2>
+            <p>
+                I used <strong class="text-[#3a3543]">ChatGPT</strong> to make my first machine learning project. A very humble <strong class="text-[#e08dad] bg-[#fcedf2] px-2 py-0.5 rounded">"Salary Prediction Project"</strong> using <span class="underline decoration-[#9cbbe9] decoration-2 underline-offset-4 font-semibold text-[#3a3543]">Linear Regression</span>.
+            </p>
+            
+            <h3 class="font-bold text-xl text-[#3a3543] mt-6">Why did we choose this project?</h3>
+            <p>
+                This project is very simple to begin with. It will help us to <strong class="text-[#3a3543]">atleast dip our toes in the water.</strong> We can't really begin making advanced machine learning projects right away. We need to make sure and understand how basic projects are made to move on to the bigger projects.
+            </p>
+
+            <h3 class="font-bold text-xl text-[#3a3543] mt-6">What will we learn by making the project (goals)</h3>
+            <p>
+                This project will teach us the <strong class="text-[#3a3543]">absolute basics of machine learning.</strong> The model we are using here is <span class="underline decoration-[#e08dad] decoration-2 underline-offset-4 font-semibold text-[#3a3543]">Linear Regression</span>. It is one of the most basic models when it comes to machine learning.
+            </p>
+
+            <hr class="border-[#f2d1df] my-10" />
+
+            <h2 class="serif text-2xl md:text-3xl font-bold text-[#3a3543] mt-8">Steps</h2>
+
+            <h3 class="font-bold text-xl text-[#3a3543] mt-6 flex items-center gap-2">
+                <span class="bg-[#e08dad] text-white text-xs w-6 h-6 rounded-full flex items-center justify-center">1</span> 
+                Use Google Colab
+            </h3>
+            <p>
+                For the sake of learning use an online tool such as <strong class="text-[#3a3543]">Google Colab</strong>. By using this you <span class="underline decoration-[#e08dad] decoration-2 underline-offset-4 font-medium text-[#3a3543]">don't have to download any dependencies.</span>
+            </p>
+
+            <h3 class="font-bold text-xl text-[#3a3543] mt-6 flex items-center gap-2">
+                <span class="bg-[#b39bc8] text-white text-xs w-6 h-6 rounded-full flex items-center justify-center">2</span> 
+                Generate the full code using ChatGPT
+            </h3>
+            <p>
+                <strong class="text-[#3a3543]">Generate the full code using ChatGPT</strong> - This step might sound a little weird but hear me out. We are <strong class="text-[#e08dad]">NOT</strong> going to blindly paste this generated code in Google Colab and call it a day.
+            </p>
+
+            <div class="rounded-2xl overflow-hidden shadow-lg my-6">
+                <div class="bg-[#211c27] px-4 py-2 text-xs text-slate-400 flex justify-between items-center border-b border-slate-800">
+                    <span>salary_prediction.py</span>
+                    <i class="far fa-copy cursor-pointer hover:text-white"></i>
+                </div>
+                <pre class="code-block p-6 text-sm overflow-x-auto rounded-b-2xl"><code><span class="text-slate-500"># Import libraries</span>
+<span class="text-[#e08dad]">import</span> pandas <span class="text-[#e08dad]">as</span> pd
+<span class="text-[#e08dad]">import</span> numpy <span class="text-[#e08dad]">as</span> np
+<span class="text-[#e08dad]">from</span> sklearn.model_selection <span class="text-[#e08dad]">import</span> train_test_split
+<span class="text-[#e08dad]">from</span> sklearn.linear_model <span class="text-[#e08dad]">import</span> LinearRegression
+<span class="text-[#e08dad]">from</span> sklearn.metrics <span class="text-[#e08dad]">import</span> mean_absolute_error, r2_score
+<span class="text-[#e08dad]">import</span> matplotlib.pyplot <span class="text-[#e08dad]">as</span> plt
+
+<span class="text-slate-500"># Create a simple dataset</span>
+data = {
+    <span class="text-[#9cbbe9]">'YearsExperience'</span>:,
+    <span class="text-[#9cbbe9]">'Salary'</span>:
+}
+df = pd.DataFrame(data)
+
+<span class="text-slate-500"># Features (X) and Target (y)</span>
+X = df[[<span class="text-[#9cbbe9]'YearsExperience'</span>]]
+y = df[<span class="text-[#9cbbe9]'Salary'</span>]
+
+<span class="text-slate-500"># Split dataset into training and testing data</span>
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=<span class="text-[#b39bc8]">0.2</span>, random_state=<span class="text-[#b39bc8]">42</span>)
+
+<span class="text-slate-500"># Create the model</span>
+model = LinearRegression()
+
+<span class="text-slate-500"># Train the model</span>
+model.fit(X_train, y_train)
+
+<span class="text-slate-500"># Make predictions</span>
+predictions = model.predict(X_test)
+
+<span class="text-slate-500"># Compare actual vs predicted values</span>
+results = pd.DataFrame({
+    <span class="text-[#9cbbe9]'Actual Salary'</span>: y_test,
+    <span class="text-[#9cbbe9]'Predicted Salary'</span>: predictions
+})
+print(<span class="text-[#9cbbe9]"Predictions:"</span>)
+print(results)
+
+<span class="text-slate-500"># Evaluate the model</span>
+mae = mean_absolute_error(y_test, predictions)
+r2 = r2_score(y_test, predictions)
+print(<span class="text-[#9cbbe9] slide">"\nMean Absolute Error:"</span>, mae)
+print(<span class="text-[#9cbbe9]"R² Score:"</span>, r2)
+
+<span class="text-slate-500"># Predict salary for a new employee</span>
+years = np.array([[<span class="text-[#b39bc8]">5.5</span>]])
+predicted_salary = model.predict(years)
+print(<span class="text-[#9cbbe9] slide">f"\nPredicted Salary for 5.5 years of experience: ₹{predicted_salary:.2f}"</span>)
+
+<span class="text-slate-500"># Visualize the regression line</span>
+plt.scatter(X, y)
+plt.plot(X, model.predict(X), linewidth=<span class="text-[#b39bc8]">2</span>)
+plt.xlabel(<span class="text-[#9cbbe9]"Years of Experience"</span>)
+plt.ylabel(<span class="text-[#9cbbe9]"Salary"</span>)
+plt.title(<span class="text-[#9cbbe9]"Salary Prediction using Linear Regression"</span>)
+plt.show()</code></pre>
+            </div>
+
+            <h3 class="font-bold text-xl text-[#3a3543] mt-6 flex items-center gap-2">
+                <span class="bg-[#9cbbe9] text-white text-xs w-6 h-6 rounded-full flex items-center justify-center">3</span> 
+                Read the code
+            </h3>
+            <p>
+                We are going to read the entire code first, slowly from top to bottom. If you are a complete beginner you might just want to give up here. Because nothing will make sense. <strong class="text-[#3a3543]">It didn't make sense to me either.</strong>
+            </p>
+            <p>
+                I didn't know what <span class="underline decoration-[#9cbbe9] decoration-2 underline-offset-4 font-medium text-[#3a3543]">pandas</span> was. I didn't know about <span class="underline decoration-[#9cbbe9] decoration-2 underline-offset-4 font-medium text-[#3a3543]">Scikit learn</span>. I didn't know anything apart from basic python. And as a beginner that's natural. You will be overwhelmed with a lot of information at once. But we are going to <strong class="text-[#e08dad]">break each and every part of the code down</strong> and understand the meaning behind it.
+            </p>
+
+            <h3 class="font-bold text-xl text-[#3a3543] mt-6 flex items-center gap-2">
+                <span class="bg-[#c3dbd0] text-white text-xs w-6 h-6 rounded-full flex items-center justify-center">4</span> 
+                Prompt ChatGPT
+            </h3>
+            <p>
+                You are going to give ChatGPT a prompt - <strong class="text-[#3a3543] bg-[#faf5f8] border border-dashed border-[#e08dad] px-2 py-1 rounded inline-block">"Explain this code to me line by line in detail explaining what every line of code does, the functions that are used and why it will help us"</strong>. By doing this we will dimistify each and every line of code.
+            </p>
+            <p>
+                Start from the top.
+            </p>
+            <p>
+                <strong class="text-[#3a3543]">Breakdown the entire code into sections</strong> and don't move on before understanding each section.
+            </p>
+            <p>
+                For example if we look at the first section where we are importing all the libraries, we begin by understanding the role of each and every library. Why is it being used? <span class="underline decoration-[#b39bc8] decoration-2 underline-offset-4 font-medium">How do these libraries connect with one another like the pieces of a puzzle.</span>
+            </p>
+            <p>
+                Again you might not understand everything or become an expert but you will have a <strong class="text-[#3a3543]">basic understanding</strong> and moving forward you won't be surprised when the terms show up.
+            </p>
+
+            <div class="my-10 bg-white border border-[#f2d1df] rounded-3xl p-6 text-center">
+                <p class="font-bold text-sm text-[#3a3543] mb-4 uppercase tracking-wider">How Linear Regression Thinks</p>
+                <svg viewBox="0 0 300 180" class="w-full max-w-sm mx-auto" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="30" y1="150" x2="280" y2="150" stroke="#3a3543" stroke-width="2"/>
+                    <line x1="30" y1="20" x2="30" y2="150" stroke="#3a3543" stroke-width="2"/>
+                    <text x="280" y="170" font-family="Outfit" font-size="10" fill="#5c5566" text-anchor="end">Experience →</text>
+                    <text x="20" y="15" font-family="Outfit" font-size="10" fill="#5c5566" transform="rotate(-90 20 15)" text-anchor="end">Salary →</text>
+                    <circle cx="60" cy="130" r="4" fill="#b39bc8"/>
+                    <circle cx="100" cy="110" r="4" fill="#b39bc8"/>
+                    <circle cx="140" cy="85" r="4" fill="#b39bc8"/>
+                    <circle cx="190" cy="70" r="4" fill="#b39bc8"/>
+                    <circle cx="240" cy="40" r="4" fill="#b39bc8"/>
+                    <line x1="40" y1="145" x2="260" y2="35" stroke="#e08dad" stroke-width="3" class="floating"/>
+                </svg>
+                <p class="text-xs text-slate-400 mt-2">The model maps data points to draw a reliable line of best fit.</p>
+            </div>
+
+            <h3 class="font-bold text-xl text-[#3a3543] mt-6 flex items-center gap-2">
+                <span class="bg-[#f2d1df] text-[#e08dad] text-xs w-6 h-6 rounded-full flex items-center justify-center">5</span> 
+                Learn the basics
+            </h3>
+            <p>
+                <strong class="text-[#3a3543]">Pandas</strong> is very commonly used when dealing with data. Ask ChatGPT to <strong class="text-[#3a3543] italic">"Explain how pandas is used in machine learning and the basic and most frequently used functions relevant to this and other beginner projects."</strong>
+            </p>
+            <p>
+                Do the same with <strong class="text-[#5c5566]">Numpy</strong>, <strong class="text-[#5c5566]">Scikit learn</strong>, <strong class="text-[#5c5566]">Matplotlib</strong>
+            </p>
+            <p>
+                Just the basics and how they are used in this project. You don't have to watch a 1 hour pandas tutorial to understand it. After 45 minutes you will forget what you learned in the first 10 minutes of the video - <strong class="text-[#e08dad]">like that actually happens with me.</strong> And sitting through a 1 hour pandas tutorial to make a salary prediction project that uses atmost 5 functions which you can read through in ChatGPT is a <span class="underline decoration-[#e08dad] decoration-2 underline-offset-4 font-medium text-[#3a3543]">massive waste of time</span> (for me atleast)
+            </p>
+
+            <h3 class="font-bold text-xl text-[#3a3543] mt-6 flex items-center gap-2">
+                <span class="bg-[#e08dad] text-white text-xs w-6 h-6 rounded-full flex items-center justify-center">6</span> 
+                Understand the model
+            </h3>
+            <p>
+                In this step we are going to understand why <strong class="text-[#3a3543]">"Linear Regression"</strong> is used for this particular project. Ask ChatGPT <strong class="text-[#3a3543] italic">"What is Linear Regression and why it is used for this project."</strong>
+            </p>
+            <p>
+                This part is really important because machine learning boils down to <strong class="text-[#e08dad]">using the right kind of model to train your data on.</strong> Depending on the dataset you are using and your requirements and the result that you want different machine learning models are used.
+            </p>
+            <p>
+                While you are at it, ask ChatGPT <strong class="text-[#3a3543] italic">"Tell me about the most basic and frequently used machine learning models. Tell me what kind of result do they produce and when to use them"</strong>
+            </p>
+            <p>
+                Also, if you ever think ChatGPT is being a little technical and you need to understand things in a more basic manner <span class="underline decoration-[#9cbbe9] decoration-2 underline-offset-4 font-medium text-[#3a3543]">tell it to explain it to you like an absolute beginner using examples.</span>
+            </p>
+
+            <h3 class="font-bold text-xl text-[#3a3543] mt-6 flex items-center gap-2">
+                <span class="bg-[#b39bc8] text-white text-xs w-6 h-6 rounded-full flex items-center justify-center">7</span> 
+                Evalutation
+            </h3>
+            <p>
+                This is very important to understand. <strong class="text-[#3a3543]">Evaluation tells you how your model is doing.</strong> Ask ChatGPT to <strong class="text-[#3a3543] italic">"Explain how a model is evaulated. What are the different way to evaluate the model. How to know how well a model is working."</strong>
+            </p>
+            <p>
+                A very amazing resource that I would suggest for beginners or even with people with some machine learning understanding to use is a crash course by Google on machine learning. <a href="https://developers.google.com/machine-learning/crash-course" target="_blank" class="text-[#e08dad] font-semibold underline decoration-[#e08dad] hover:text-[#b39bc8] transition">Google Machine Learning Crash Course</a>
+            </p>
+            <p>
+                By doing this I firmly believe that you would atleast have some understand of machine learning. <strong class="text-[#3a3543]">Machine learning is all about data, using the right models, tweaking the code and the data to make the model better.</strong> When you move on to more complex projects the kind of data that you work with and the model that you use become very important. Use ChatGPT and make more simple and beginner friendly machine learning projects. By doing this you will <strong class="text-[#e08dad]">build an aptitude for machine learning</strong> which is a very important thing to have.
+            </p>
+
+        </article>
+
+        <footer class="mt-16 pt-8 border-t border-[#f2d1df] text-center">
+            <a href="../index.html" class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#e08dad] hover:text-[#b39bc8] transition">
+                <i class="fas fa-arrow-left"></i> Back to Universe Portfolio
+            </a>
+        </footer>
+
+    </main>
+
+</body>
+</html>
